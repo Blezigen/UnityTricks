@@ -1,0 +1,421 @@
+fileFormatVersion: 2
+guid: b4c3994d779fcce4193622a1029c7d9b
+timeCreated: 1485162246
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bullet
+    100002: Bullet_001
+    100004: Cube
+    100006: DoorL
+    100008: DoorR
+    100010: Tower
+    100012: Turel
+    100014: //RootNode
+    400000: Bullet
+    400002: Bullet_001
+    400004: Cube
+    400006: DoorL
+    400008: DoorR
+    400010: Tower
+    400012: Turel
+    400014: //RootNode
+    2300000: Bullet
+    2300002: Bullet_001
+    2300004: Cube
+    2300006: DoorL
+    2300008: DoorR
+    2300010: Tower
+    2300012: Turel
+    3300000: Bullet
+    3300002: Bullet_001
+    3300004: Cube
+    3300006: DoorL
+    3300008: DoorR
+    3300010: Tower
+    3300012: Turel
+    4300000: Cube
+    4300002: DoorL
+    4300004: DoorR
+    4300006: Bullet
+    4300008: Bullet_001
+    4300010: Tower
+    4300012: Turel
+    7400000: StayOff
+    7400002: Idle
+    7400004: StayOn
+    7400006: Idle //// Cube
+    7400008: StayOff //// Cube
+    7400010: StayOn //// Cube
+    7400012: Idle //// DoorL
+    7400014: StayOff //// DoorL
+    7400016: StayOn //// DoorL
+    7400018: Idle //// DoorR
+    7400020: StayOff //// DoorR
+    7400022: StayOn //// DoorR
+    7400024: Idle //// Bullet
+    7400026: StayOff //// Bullet
+    7400028: StayOn //// Bullet
+    7400030: Idle //// Bullet_001
+    7400032: StayOff //// Bullet_001
+    7400034: StayOn //// Bullet_001
+    7400036: Idle //// Tower
+    7400038: StayOff //// Tower
+    7400040: StayOn //// Tower
+    7400042: Idle //// Turel
+    7400044: StayOff //// Turel
+    7400046: StayOn //// Turel
+    7400048: Fire
+    7400050: Fire //// Cube
+    7400052: Fire //// DoorL
+    7400054: Fire //// DoorR
+    7400056: Fire //// Bullet
+    7400058: Fire //// Bullet_001
+    7400060: Fire //// Tower
+    7400062: Fire //// Turel
+    7400064: DiactiveTower
+    7400066: StayIdle
+    7400068: Diactivate
+    7400070: Activate
+    9500000: //RootNode
+    11100000: //RootNode
+    11100002: Bullet
+    11100004: Bullet_001
+    11100006: Cube
+    11100008: DoorL
+    11100010: DoorR
+    11100012: Tower
+    11100014: Turel
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 2
+    bakeSimulation: 0
+    resampleCurves: 0
+    optimizeGameObjects: 1
+    motionNodeName: <Root Transform>
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Diactivate
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: DoorL
+        weight: 1
+      - path: DoorR
+        weight: 1
+      - path: Bullet
+        weight: 1
+      - path: Bullet_001
+        weight: 1
+      - path: Tower
+        weight: 1
+      - path: Turel
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 13
+    - serializedVersion: 16
+      name: Activate
+      takeName: Default Take
+      firstFrame: 13
+      lastFrame: 36
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: DoorL
+        weight: 1
+      - path: DoorR
+        weight: 1
+      - path: Bullet
+        weight: 1
+      - path: Bullet_001
+        weight: 1
+      - path: Tower
+        weight: 1
+      - path: Turel
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Default Take
+      firstFrame: 36
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: DoorL
+        weight: 1
+      - path: DoorR
+        weight: 1
+      - path: Bullet
+        weight: 1
+      - path: Bullet_001
+        weight: 1
+      - path: Tower
+        weight: 1
+      - path: Turel
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fire
+      takeName: Default Take
+      firstFrame: 45
+      lastFrame: 53
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: DoorL
+        weight: 1
+      - path: DoorR
+        weight: 1
+      - path: Bullet
+        weight: 1
+      - path: Bullet_001
+        weight: 1
+      - path: Tower
+        weight: 1
+      - path: Turel
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: StayOff
+      takeName: Default Take
+      firstFrame: 13
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: DoorL
+        weight: 1
+      - path: DoorR
+        weight: 1
+      - path: Bullet
+        weight: 1
+      - path: Bullet_001
+        weight: 1
+      - path: Tower
+        weight: 1
+      - path: Turel
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: StayOn
+      takeName: Default Take
+      firstFrame: 52
+      lastFrame: 53
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: DoorL
+        weight: 1
+      - path: DoorR
+        weight: 1
+      - path: Bullet
+        weight: 1
+      - path: Bullet_001
+        weight: 1
+      - path: Tower
+        weight: 1
+      - path: Turel
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
