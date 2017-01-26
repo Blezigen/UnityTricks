@@ -5,75 +5,90 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public bool TurelActive = false;
-    public bool TurelAttack = false;
-    public float TurelTurnSpeed = 10.0F;
-
+    private bool _turelAttack;
+    private GameObject _turelHead;
+    private float _attackCooldown;
+    private Animator _animator;
+    private List<BulletHole> _bulletHols;
+    public Vector3 _turelFireParticleSize;
 
     public GameObject TurelHole;
     public GameObject Turel;
-    private GameObject Head;
 
-    public GameObject bullet_obj;
-    public float DelayAttackCooldown = 0.25f;
-    private float AttackCooldown = 0.25f;
-    public float bulletSpeed = 25.0f;
-    public float BulletLifeTime = 1F;
+    public bool TurelActive = false;
+    
+    public float TurelTurnSpeed = 10.0F;
+    public float TurelAttackCooldown = 0.25f;
 
-    private Animator current_Animator;
+    public GameObject TurelBullet;
+    public float TurelBulletSpeed = 25.0f;
+    public float TurelBulletMaxLifeTime = 1F;
+    
+    public ParticleSystem TurelFireParticle;
 
-    private int fireAnimHash = Animator.StringToHash("Fire");
-    private List<BulletHole> bulletHole;
-    public ParticleSystem fireParticle;
-    public Vector3 particleSize;
 
-	// Use this for initialization
+    void Activate()
+    {
+        TurelActive = true;
+    }
+
+    void DiActivate()
+    {
+        TurelActive = false;
+    }
+
+    // Use this for initialization
 	void Start ()
 	{
-        current_Animator = GetComponent<Animator>();
+	    _turelAttack = false;
 
-	    GameObject temp = Instantiate(Turel, TurelHole.transform.position, TurelHole.transform.rotation,TurelHole.transform);
-	    Head = temp;
-        bulletHole = new List<BulletHole>();
-        foreach (Transform child in Head.transform)
+        _turelHead = Instantiate(Turel, TurelHole.transform.position, TurelHole.transform.rotation,TurelHole.transform); 
+       
+        _attackCooldown = 0;
+
+        _animator = GetComponent<Animator>();
+        
+        _bulletHols = new List<BulletHole>();
+        foreach (Transform child in _turelHead.transform)
         {
             BulletHole tempory = child.GetComponent<BulletHole>();
-            bulletHole.Add(tempory);
+            _bulletHols.Add(tempory);
         }
-        Debug.Log(bulletHole.Count);
+        _turelFireParticleSize = new Vector3(2f,2f,2f);
+        Debug.Log(_bulletHols.Count);
 	}
 
     void TowerAttack(GameObject enemy)
     {
-        if (bulletHole == null) return;
-        foreach (var hole in bulletHole)
+        if (_bulletHols == null) return;
+        foreach (var hole in _bulletHols)
         {
-            ParticleSystem explosionEffect = Instantiate(fireParticle) as ParticleSystem;
+            ParticleSystem explosionEffect = Instantiate(TurelFireParticle) as ParticleSystem;
             explosionEffect.transform.position = hole.transform.position;
             explosionEffect.transform.rotation = hole.transform.rotation;
-            explosionEffect.transform.localScale = particleSize;
+            explosionEffect.transform.localScale = _turelFireParticleSize;
             //play it
             explosionEffect.loop = false;
             explosionEffect.Play();
             Destroy(explosionEffect.gameObject, explosionEffect.duration);
 
-            GameObject bullet = Instantiate(bullet_obj.gameObject, hole.transform.position, hole.transform.rotation);
-            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
-            Destroy(bullet, BulletLifeTime);
+            GameObject bullet = Instantiate(TurelBullet.gameObject, hole.transform.position, hole.transform.rotation);
+            bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * TurelBulletSpeed;
+            Destroy(bullet, TurelBulletMaxLifeTime);
         }
     }
 
     // Update is called once per frame
 	void Update () {
-        current_Animator.SetBool("Active", TurelActive);
-        current_Animator.SetBool("Fire", TurelAttack);
+        _animator.SetBool("Active", TurelActive);
+        _animator.SetBool("Fire", _turelAttack);
 
         if (Input.GetKeyDown(KeyCode.N))
         {
             TurelActive = !TurelActive;
             if (!TurelActive)
             {
-                TurelAttack = false;
+                _turelAttack = false;
             }
         }
 
@@ -81,7 +96,7 @@ public class Tower : MonoBehaviour
         {
             if (TurelActive)
             {
-                TurelAttack = !TurelAttack;
+                _turelAttack = !_turelAttack;
             }
         }
 
@@ -107,17 +122,17 @@ public class Tower : MonoBehaviour
         }
 
 
-        Vector3 dir = Head.transform.position - nearestEnemy.transform.position;
+        Vector3 dir = _turelHead.transform.position - nearestEnemy.transform.position;
         Quaternion targetQuaternion = Quaternion.LookRotation(dir);
 
-        Head.transform.rotation = Quaternion.Slerp(Head.transform.rotation, Quaternion.Euler(-90, targetQuaternion.eulerAngles.y+90, 0), TurelTurnSpeed * Time.deltaTime);
+        _turelHead.transform.rotation = Quaternion.Slerp(_turelHead.transform.rotation, Quaternion.Euler(-90, targetQuaternion.eulerAngles.y + 90, 0), TurelTurnSpeed * Time.deltaTime);
         
-        AttackCooldown -= Time.deltaTime;
-	    if (TurelAttack && AttackCooldown < 0)
+        _attackCooldown -= Time.deltaTime;
+        if (_turelAttack && _attackCooldown < 0)
 	    {
 
             TowerAttack(nearestEnemy.gameObject);
-	        AttackCooldown = DelayAttackCooldown;
+            _attackCooldown = TurelAttackCooldown;
 	    }
 	}
 }
